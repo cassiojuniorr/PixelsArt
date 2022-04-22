@@ -30,3 +30,17 @@ squeBl.addEventListener("click",seCor);
 
 let squeG = document.getElementById("grenn");
 squeG.addEventListener("click",seCor);
+
+
+//pegando cor
+const boardP = document.getElementById("pixel-board");
+function takeC(en){
+    if (squeb.classList == "selected"){
+        //let quadradinho = document.querySelector(".pixel");
+        en.style.background-color = "black";
+    } else if (squeR.classList == "selected"){
+        en.style.background-color = "red";
+    }
+}
+
+takeC();
