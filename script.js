@@ -35,12 +35,26 @@ squeG.addEventListener("click",seCor);
 //pegando cor
 const boardP = document.getElementById("pixel-board");
 function takeC(en){
-    if (squeb.classList == "selected"){
-        //let quadradinho = document.querySelector(".pixel");
-        en.style.background-color = "black";
-    } else if (squeR.classList == "selected"){
-        en.style.background-color = "red";
+    const color = document.querySelector('.selected');
+    en.target.style.backgroundColor = color.id;
+}
+//coloca a cor
+function putCo() {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let ind of pixel) {
+        ind.addEventListener('click', takeC);
     }
 }
+putCo();
 
-takeC();
+//botão
+function botu(){
+    const pixel = document.querySelectorAll('.pixel');
+    for(let cont of pixel){
+        cont.style.backgroundColor = "white";
+    }
+}
+botu();
+
+let butto = document.getElementById("clear-board");
+butto.addEventListener("click", botu);
