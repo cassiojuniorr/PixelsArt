@@ -58,3 +58,4 @@ botu();
 
 let butto = document.getElementById("clear-board");
 butto.addEventListener("click", botu);
+//BONÛS
