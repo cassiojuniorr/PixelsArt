@@ -28,7 +28,7 @@ squeR.addEventListener("click",seCor);
 let squeBl = document.getElementById("blue");
 squeBl.addEventListener("click",seCor);
 
-let squeG = document.getElementById("grenn");
+let squeG = document.getElementById("green");
 squeG.addEventListener("click",seCor);
 
 
@@ -37,6 +37,7 @@ const boardP = document.getElementById("pixel-board");
 function takeC(en){
     const color = document.querySelector('.selected');
     en.target.style.backgroundColor = color.id;
+    console.log(en.target.style.backgroundColor = color.id);
 }
 //coloca a cor
 function putCo() {
@@ -47,7 +48,7 @@ function putCo() {
 }
 putCo();
 
-//botão
+//botão limpar
 function botu(){
     const pixel = document.querySelectorAll('.pixel');
     for(let cont of pixel){
